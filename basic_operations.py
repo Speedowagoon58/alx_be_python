@@ -12,5 +12,3 @@ print(f"Subtraction of {number1} and {number2} is {subtraction_result}")
 # Multiplication
 multiplication_result = number1 * number2
 print(f"Multiplication of {number1} and {number2} is {multiplication_result}")
-
-#hi
