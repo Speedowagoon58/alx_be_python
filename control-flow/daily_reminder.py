@@ -13,26 +13,16 @@ def get_task_details():
     return task, priority, time_bound
 
 def generate_reminder(task, priority, time_bound):
-    match priority:
-        case "high":
-            base_message = f"'{task}' is a high priority task"
-        case "medium":
-            base_message = f"'{task}' is a medium priority task"
-        case "low":
-            base_message = f"'{task}' is a low priority task"
-        case _:
-            return "Invalid priority level entered."
-    
-    # Add time sensitivity note
+    # Create reminder message matching the exact format from example
     if time_bound == "yes":
-        base_message += " that requires immediate attention today!"
+        reminder = f"Reminder: '{task}' is a {priority} priority task that requires immediate attention today!"
     else:
         if priority == "low":
-            base_message += ". Consider completing it when you have free time."
+            reminder = f"Note: '{task}' is a {priority} priority task. Consider completing it when you have free time."
         else:
-            base_message += ". Plan to complete this task soon."
+            reminder = f"Note: '{task}' is a {priority} priority task."
     
-    return base_message
+    return reminder
 
 def main():
     # Get task details from user
@@ -40,7 +30,7 @@ def main():
     
     # Generate and display the reminder
     reminder = generate_reminder(task, priority, time_bound)
-    print("\nReminder:", reminder)
+    print("\n" + reminder)
 
 if __name__ == "__main__":
     main()
