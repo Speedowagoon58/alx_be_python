@@ -9,11 +9,11 @@ def main():
     shopping_list = []
     while True:
         display_menu()
-        choice = input("Enter your choice: ")
+        choice = int(input("Enter your choice: "))
 
         if choice == '1':
             # Prompt for and add an item
-            shopping_list += input("Add your option: ")
+            shopping_list += input("Enter the item to add: ")
 
         elif choice == '2':
             # Prompt for and remove an item
