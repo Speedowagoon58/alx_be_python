@@ -21,7 +21,7 @@ def calculation():
                     result = convert_to_celsius(prompt_temp)
                     print(f"{prompt_temp}°F is {result:.2f}°C")
                 case _:
-                    print("Invalid unit. Please choose 'C' or 'F'.")
+                    print("Invalid temperature. Please enter a numeric value.")
         
         unit_choice(prompt_unit)
     
