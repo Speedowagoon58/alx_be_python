@@ -1,5 +1,5 @@
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
+FAHRENHEIT_TO_CELSIUS_FACTOR=5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR=9/5
 
 def convert_to_celsius(fahrenheit):
     return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
@@ -29,7 +29,3 @@ def calculation():
         print("Invalid input. Please enter a valid numeric temperature.")
 
 calculation()
-
-
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
