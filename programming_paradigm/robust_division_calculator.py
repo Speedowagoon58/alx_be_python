@@ -23,7 +23,7 @@ def safe_divide(numerator, denominator):
         return f"The result of the division is {result}"
         
     except ValueError:
-        return "Error: non-numeric input"
+        return "Error: Please enter numeric values only."
     
     # Error: Please enter numeric values only."
-    
+    #Error: Please enter numeric values only.
