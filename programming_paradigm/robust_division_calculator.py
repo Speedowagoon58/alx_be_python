@@ -17,15 +17,13 @@ def safe_divide(numerator, denominator):
         
         # Check for division by zero
         if den == 0:
-            raise ZeroDivisionError("Error: Cannot divide by zero.")
+            return "Error: division by zero"
             
         # Perform division
         result = num / den
         return result
         
     except ValueError:
-        return "Error: Please enter numeric values only."
-    except ZeroDivisionError as e:
-        return str(e)
+        return "Error: non-numeric input"
     except Exception as e:
-        return f"An unexpected error occurred: {str(e)}"
+        return f"Error: {str(e)}"

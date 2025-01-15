@@ -14,7 +14,7 @@ def main():
     # Perform division and handle result
     result = safe_divide(numerator, denominator)
     
-    # Check if result is error message or actual result
+    # Output formatting
     if isinstance(result, str):
         print(result)
         sys.exit(1)
