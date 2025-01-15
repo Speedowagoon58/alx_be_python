@@ -18,7 +18,7 @@ def safe_divide(numerator, denominator):
         num = float(numerator)
         den = float(denominator)
     except ValueError:
-        raise ValueError("Error: non-numeric input")
+        raise ValueError("Error: Cannot divide by zero.")
     
     # Perform division
     if den == 0:
