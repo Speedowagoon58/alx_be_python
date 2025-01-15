@@ -24,3 +24,6 @@ def safe_divide(numerator, denominator):
         
     except ValueError:
         return "Error: non-numeric input"
+    
+    # Error: Please enter numeric values only."
+    
