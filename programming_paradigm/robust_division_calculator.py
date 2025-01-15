@@ -24,7 +24,7 @@ def safe_divide(numerator, denominator):
         return result
         
     except ValueError:
-        return "Error: Please provide numeric inputs"
+        return "Error: Please enter numeric values only."
     except ZeroDivisionError as e:
         return str(e)
     except Exception as e:
