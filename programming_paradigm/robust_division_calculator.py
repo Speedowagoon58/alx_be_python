@@ -17,7 +17,7 @@ def safe_divide(numerator, denominator):
         
         # Check for division by zero
         if den == 0:
-            raise ZeroDivisionError("Division by zero is not allowed")
+            raise ZeroDivisionError("Error: Cannot divide by zero.")
             
         # Perform division
         result = num / den
