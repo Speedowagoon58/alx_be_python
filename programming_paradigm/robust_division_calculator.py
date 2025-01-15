@@ -8,22 +8,24 @@ def safe_divide(numerator, denominator):
         
     Returns:
         float: Result of division if successful
-        str: Error message if division cannot be performed
+        
+    Raises:
+        ValueError: If inputs cannot be converted to float
+        ZeroDivisionError: If denominator is zero
     """
     try:
-        # Convert inputs to float
+        # Convert inputs to float - may raise ValueError
         num = float(numerator)
         den = float(denominator)
         
         # Check for division by zero
         if den == 0:
-            return "Error: division by zero"
+            raise ZeroDivisionError("Cannot divide by zero")
             
         # Perform division
         result = num / den
         return result
         
-    except ValueError:
-        return "Error: non-numeric input"
-    except Exception as e:
-        return f"Error: {str(e)}"
+    except (ValueError, ZeroDivisionError):
+        # Re-raise the exceptions to be handled by the caller
+        raise

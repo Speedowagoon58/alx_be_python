@@ -11,16 +11,18 @@ def main():
     numerator = sys.argv[1]
     denominator = sys.argv[2]
     
-    # Perform division and handle result
-    result = safe_divide(numerator, denominator)
-    
-    # Output formatting
-    if isinstance(result, str):
-        print(result)
-        sys.exit(1)
-    else:
+    try:
+        # Perform division
+        result = safe_divide(numerator, denominator)
         print(f"The result of the division is {result}")
         sys.exit(0)
+        
+    except ValueError:
+        print("Error: non-numeric input")
+        sys.exit(1)
+    except ZeroDivisionError:
+        print("Error: division by zero")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
