@@ -7,7 +7,7 @@ class Book:
         if self:
             self.close()
             print(f"Deleting {self.title}")
-    def __str__(self, title, author, year):
+    def __str__(self):
         return f"{self.title} by {self.author}, published in {self.year}"
-    def __rep__(self, title, author, year):
+    def __rep__(self):
         f"Book('{self.title}', '{self.author}', {self.year})"
