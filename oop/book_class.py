@@ -1,8 +1,8 @@
 class Book: 
     def __init__(self, title, author, year):
-        self.title : title
-        self.author : author
-        self.year : year
+        self.title : "1984"
+        self.author : "George Orwell"
+        self.year : "1949"
     def __del__(self):
         if self:
             self.close()
